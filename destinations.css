@@ -31,12 +31,17 @@ body {
 
 .header {
     position: sticky;
+    background: #071415;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 20;
-    /* border-bottom: 1px solid rgba(255, 255, 255, 0.25); */
-    background-color: #15191a;
+
+    /*
+       خط بسیار ظریف زیر Header
+       برای ایجاد همان Border محو که خواستی.
+    */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .nav-wrapper {
