@@ -1,0 +1,1289 @@
+/* =========================================================
+   CULTURE & HISTORY PAGE
+   TAILWIND + CUSTOM CSS
+   ========================================================= */
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.culture-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 50;
+
+  border-bottom: 1px solid rgba(255,255,255,.20);
+
+  color: white;
+}
+
+
+.culture-logo {
+  color: white;
+
+  font-size: 21px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+
+.culture-logo span {
+  color: #35c8d0;
+}
+
+
+.culture-nav-link {
+  position: relative;
+
+  color: rgba(255,255,255,.82);
+
+  font-size: 12px;
+  font-weight: 500;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+
+  transition: color .3s ease;
+}
+
+
+.culture-nav-link:hover,
+.culture-nav-link.active {
+  color: #35c8d0;
+}
+
+
+.culture-nav-link.active::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: -10px;
+
+  width: 100%;
+  height: 1px;
+
+  background: #35c8d0;
+}
+
+
+.culture-nav-button {
+  padding: 10px 22px;
+
+  border: 1px solid rgba(255,255,255,.6);
+
+  color: white;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition:
+    background .3s ease,
+    color .3s ease,
+    border-color .3s ease;
+}
+
+
+.culture-nav-button:hover {
+  background: #35c8d0;
+
+  border-color: #35c8d0;
+
+  color: #051011;
+}
+
+
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.culture-hero {
+  position: relative;
+
+  min-height: 850px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: #051011;
+}
+
+
+.hero-moving-gallery {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  z-index: 0;
+}
+
+
+.hero-gallery-track {
+  display: flex;
+
+  width: max-content;
+  height: 100%;
+
+  animation:
+    heroGalleryMove 45s linear infinite;
+}
+
+
+.hero-gallery-image {
+  position: relative;
+
+  width: 45vw;
+  min-width: 420px;
+
+  height: 100%;
+}
+
+
+.hero-gallery-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  filter: saturate(.9);
+}
+
+
+.culture-hero-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(5,16,17,.88) 0%,
+      rgba(5,16,17,.68) 38%,
+      rgba(5,16,17,.48) 65%,
+      rgba(5,16,17,.75) 100%
+    );
+}
+
+
+.culture-hero-overlay::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(5,16,17,.45),
+      transparent 35%,
+      rgba(5,16,17,.65)
+    );
+}
+
+
+@keyframes heroGalleryMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.culture-hero-label {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-bottom: 25px;
+
+  color: #35c8d0;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 4px;
+
+  text-transform: uppercase;
+}
+
+
+.culture-hero-label span {
+  width: 35px;
+  height: 1px;
+
+  background: #35c8d0;
+}
+
+
+.culture-hero-title {
+  margin: 0;
+
+  color: white;
+
+  font-size: clamp(58px, 9vw, 110px);
+
+  font-weight: 600;
+
+  line-height: .95;
+
+  letter-spacing: -4px;
+}
+
+
+.culture-hero-title span {
+  display: block;
+}
+
+
+.hero-title-italic {
+  font-family: "Playfair Display", serif;
+
+  font-weight: 500;
+
+  letter-spacing: -2px;
+}
+
+
+.culture-hero-description {
+  max-width: 680px;
+
+  margin: 30px auto 0;
+
+  color: rgba(255,255,255,.82);
+
+  font-size: 16px;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================================
+   HERO BUTTONS
+   ========================================================= */
+
+.culture-primary-button,
+.culture-outline-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  min-width: 170px;
+
+  padding: 14px 25px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+
+  transition:
+    transform .3s ease,
+    background .3s ease,
+    color .3s ease;
+}
+
+
+.culture-primary-button {
+  background: #35c8d0;
+
+  color: #051011;
+}
+
+
+.culture-primary-button:hover {
+  transform: translateY(-3px);
+
+  background: #fff;
+}
+
+
+.culture-outline-button {
+  border: 1px solid rgba(255,255,255,.7);
+
+  color: white;
+}
+
+
+.culture-outline-button:hover {
+  transform: translateY(-3px);
+
+  background: white;
+
+  color: #051011;
+}
+
+
+/* =========================================================
+   HERO STATISTICS
+   ========================================================= */
+
+.hero-statistics {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 75px;
+
+  margin-top: 80px;
+}
+
+
+.hero-stat {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+}
+
+
+.hero-stat strong {
+  color: white;
+
+  font-size: 28px;
+  font-weight: 500;
+}
+
+
+.hero-stat span {
+  margin-top: 4px;
+
+  color: rgba(255,255,255,.62);
+
+  font-size: 10px;
+
+  letter-spacing: 1.5px;
+
+  text-transform: uppercase;
+}
+
+
+.hero-scroll {
+  position: absolute;
+
+  right: 5%;
+  bottom: 35px;
+
+  z-index: 10;
+
+  color: rgba(255,255,255,.7);
+
+  font-size: 10px;
+
+  letter-spacing: 3px;
+}
+
+
+.hero-scroll span {
+  margin-left: 8px;
+
+  color: #35c8d0;
+
+  font-size: 16px;
+}
+
+
+
+/* =========================================================
+   SECTION TITLES
+   ========================================================= */
+
+.section-label {
+  display: inline-block;
+
+  color: #35aeb5;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  text-transform: uppercase;
+}
+
+
+.section-label::before {
+  content: "";
+
+  display: inline-block;
+
+  width: 28px;
+  height: 1px;
+
+  margin-right: 10px;
+
+  vertical-align: middle;
+
+  background: #35c8d0;
+}
+
+
+.section-heading-large {
+  margin-top: 15px;
+
+  color: #15191a;
+
+  font-size: clamp(40px, 5vw, 65px);
+
+  font-weight: 600;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+
+.section-heading-large em {
+  font-family: "Playfair Display", serif;
+
+  font-weight: 500;
+}
+
+
+
+/* =========================================================
+   HISTORY CARDS
+   ========================================================= */
+
+.history-card {
+  overflow: hidden;
+
+  background: #f8f9f8;
+
+  border: 1px solid #e7ebeb;
+
+  transition:
+    transform .45s ease,
+    box-shadow .45s ease;
+}
+
+
+.history-card:hover {
+  transform: translateY(-9px);
+
+  box-shadow:
+    0 25px 50px rgba(5,16,17,.10);
+}
+
+
+/* =========================================================
+   MINI HISTORY GALLERY
+   ========================================================= */
+
+.mini-gallery {
+  width: 100%;
+  height: 270px;
+
+  overflow: hidden;
+
+  background: #051011;
+}
+
+
+.mini-gallery-track {
+  display: flex;
+
+  width: 600%;
+
+  height: 100%;
+
+  animation:
+    historyGalleryMove 18s infinite;
+}
+
+
+.mini-gallery-track img {
+  width: 16.666666%;
+
+  height: 270px;
+
+  flex: 0 0 16.666666%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+@keyframes historyGalleryMove {
+
+  0%,
+  25% {
+    transform: translateX(0);
+  }
+
+  30%,
+  55% {
+    transform: translateX(-16.666666%);
+  }
+
+  60%,
+  85% {
+    transform: translateX(-33.333333%);
+  }
+
+  90%,
+  100% {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+.history-card:hover .mini-gallery-track {
+  animation-duration: 25s;
+}
+
+
+.card-number {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #35aeb5;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+
+.card-title {
+  color: #15191a;
+
+  font-size: 24px;
+  font-weight: 600;
+
+  line-height: 1.2;
+}
+
+
+.card-text {
+  color: #667073;
+
+  font-size: 14px;
+
+  line-height: 1.8;
+}
+
+
+
+/* =========================================================
+   CULTURE CARDS
+   ========================================================= */
+
+.culture-card {
+  overflow: hidden;
+
+  background: white;
+
+  border: 1px solid #e7ebeb;
+
+  transition:
+    transform .4s ease,
+    box-shadow .4s ease;
+}
+
+
+.culture-card:hover {
+  transform: translateY(-8px);
+
+  box-shadow:
+    0 22px 45px rgba(5,16,17,.10);
+}
+
+
+.culture-mini-gallery {
+  width: 100%;
+  height: 190px;
+
+  overflow: hidden;
+
+  background: #051011;
+}
+
+
+.culture-mini-track {
+  display: flex;
+
+  width: 600%;
+
+  height: 100%;
+
+  animation:
+    cultureGalleryMove 20s infinite;
+}
+
+
+.culture-mini-track img {
+  width: 16.666666%;
+
+  height: 190px;
+
+  flex: 0 0 16.666666%;
+
+  object-fit: cover;
+
+  display: block;
+}
+
+
+@keyframes cultureGalleryMove {
+
+  0%,
+  25% {
+    transform: translateX(0);
+  }
+
+  30%,
+  55% {
+    transform: translateX(-16.666666%);
+  }
+
+  60%,
+  85% {
+    transform: translateX(-33.333333%);
+  }
+
+  90%,
+  100% {
+    transform: translateX(-50%);
+  }
+
+}
+
+
+.culture-card:hover .culture-mini-track {
+  animation-duration: 27s;
+}
+
+
+
+/* =========================================================
+   LARGE CULTURAL GALLERY
+   ========================================================= */
+
+.culture-photo-section {
+  padding: 120px 0;
+
+  overflow: hidden;
+
+  background: #f6f9f9;
+}
+
+
+.large-moving-gallery {
+  width: 100%;
+
+  overflow: hidden;
+}
+
+
+.large-gallery-track {
+  display: flex;
+
+  width: max-content;
+
+  gap: 16px;
+
+  animation:
+    largeGalleryMove 40s linear infinite;
+}
+
+
+.large-gallery-track:hover {
+  animation-play-state: paused;
+}
+
+
+.large-gallery-item {
+  width: 320px;
+  height: 440px;
+
+  flex: 0 0 320px;
+
+  overflow: hidden;
+
+  background: #051011;
+}
+
+
+.large-gallery-item img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform .8s ease;
+}
+
+
+.large-gallery-item:hover img {
+  transform: scale(1.07);
+}
+
+
+@keyframes largeGalleryMove {
+
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(calc(-50% - 8px));
+  }
+
+}
+
+
+
+/* =========================================================
+   HERITAGE
+   ========================================================= */
+
+.heritage-main-image {
+  height: 600px;
+
+  overflow: hidden;
+
+  background: #051011;
+}
+
+
+.heritage-main-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform .8s ease;
+}
+
+
+.heritage-main-image:hover img {
+  transform: scale(1.05);
+}
+
+
+.heritage-small-image {
+  height: 100px;
+
+  overflow: hidden;
+}
+
+
+.heritage-small-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform .5s ease;
+}
+
+
+.heritage-small-image:hover img {
+  transform: scale(1.08);
+}
+
+
+
+/* =========================================================
+   QUOTE
+   ========================================================= */
+
+.culture-quote-section {
+  padding: 110px 0;
+
+  background: #35aeb5;
+}
+
+
+.quote-mark {
+  display: block;
+
+  color: rgba(255,255,255,.45);
+
+  font-family: "Playfair Display", serif;
+
+  font-size: 80px;
+
+  line-height: .5;
+}
+
+
+.culture-quote-section h2 {
+  margin-top: 25px;
+
+  color: white;
+
+  font-size: clamp(25px, 4vw, 42px);
+
+  font-weight: 500;
+
+  line-height: 1.4;
+}
+
+
+.quote-line {
+  width: 70px;
+  height: 2px;
+
+  margin: 35px auto 0;
+
+  background: rgba(255,255,255,.6);
+}
+
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.culture-footer {
+  background: #101718;
+}
+
+
+.footer-title {
+  margin-bottom: 18px;
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+.footer-link {
+  color: #9da7a8;
+
+  font-size: 14px;
+
+  transition:
+    color .3s ease;
+}
+
+
+.footer-link:hover {
+  color: #35c8d0;
+}
+
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 1000px) {
+
+  .culture-hero {
+    min-height: 780px;
+  }
+
+
+  .hero-gallery-image {
+    width: 55vw;
+  }
+
+
+  .hero-statistics {
+    gap: 45px;
+  }
+
+
+  .large-gallery-item {
+    width: 290px;
+
+    flex-basis: 290px;
+
+    height: 400px;
+  }
+
+
+  .heritage-main-image {
+    height: 500px;
+  }
+
+}
+
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 700px) {
+
+  .culture-hero {
+    min-height: 760px;
+  }
+
+
+  .culture-hero-title {
+    font-size: 55px;
+
+    letter-spacing: -2px;
+  }
+
+
+  .culture-hero-description {
+    font-size: 14px;
+  }
+
+
+  .culture-hero-label {
+    font-size: 9px;
+
+    letter-spacing: 2.5px;
+  }
+
+
+  .culture-hero-label span {
+    width: 20px;
+  }
+
+
+  .hero-statistics {
+    gap: 25px;
+
+    margin-top: 55px;
+  }
+
+
+  .hero-stat strong {
+    font-size: 22px;
+  }
+
+
+  .hero-stat span {
+    font-size: 8px;
+
+    letter-spacing: 1px;
+
+    text-align: center;
+  }
+
+
+  .hero-scroll {
+    display: none;
+  }
+
+
+  .hero-gallery-image {
+    width: 80vw;
+
+    min-width: 300px;
+  }
+
+
+  .mini-gallery {
+    height: 240px;
+  }
+
+
+  .mini-gallery-track img {
+    height: 240px;
+  }
+
+
+  .culture-mini-gallery {
+    height: 220px;
+  }
+
+
+  .culture-mini-track img {
+    height: 220px;
+  }
+
+
+  .large-gallery-item {
+    width: 250px;
+
+    flex-basis: 250px;
+
+    height: 340px;
+  }
+
+
+  .heritage-main-image {
+    height: 400px;
+  }
+
+
+  .culture-photo-section {
+    padding: 80px 0;
+  }
+
+}
+
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+  .culture-hero-title {
+    font-size: 45px;
+  }
+
+
+  .hero-statistics {
+    gap: 18px;
+  }
+
+
+  .hero-stat strong {
+    font-size: 19px;
+  }
+
+
+  .culture-primary-button,
+  .culture-outline-button {
+    width: 100%;
+
+    max-width: 240px;
+  }
+
+
+  .large-gallery-item {
+    width: 220px;
+
+    flex-basis: 220px;
+
+    height: 300px;
+  }
+
+}
+
+
+
+/* =========================================================
+   REDUCED MOTION
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-gallery-track,
+  .mini-gallery-track,
+  .culture-mini-track,
+  .large-gallery-track {
+    animation: none !important;
+  }
+
+  .history-card,
+  .culture-card,
+  .heritage-main-image img,
+  .heritage-small-image img,
+  .large-gallery-item img {
+    transition: none !important;
+  }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 
+   حرکت نرم هنگام کلیک روی لینک‌های داخلی
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* 
+   ظاهر کلی body
+   پس‌زمینه سفید است همان چیزی که خواستی.
+*/
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #ffffff;
+    color: #15191a;
+    line-height: 1.6;
+}
+
+
+/* حذف underline لینک‌ها */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* جلوگیری از بیرون زدن تصاویر */
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ============================================================
+   CONTAINER
+   حداکثر عرض محتوای سایت
+   ============================================================ */
+
+.container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+
+/* فاصله عمودی بیشتر بخش‌ها */
+
+.section {
+    padding: 130px 0;
+}
+
+
+/* ============================================================
+   HEADER / NAVBAR
+   ============================================================ */
+
+.header {
+    position: sticky;
+    background: #101515;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+
+    /*
+       خط بسیار ظریف زیر Header
+       برای ایجاد همان Border محو که خواستی.
+    */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.nav-wrapper {
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* لوگو */
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+
+.logo span {
+    color: #35c8d0;
+}
+
+
+/* منوی اصلی */
+
+.navigation {
+    display: flex;
+    gap: 34px;
+}
+
+
+.navigation a {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 12px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.navigation a:hover,
+.navigation a.active {
+    color: #ffffff;
+}
+
+
+/* دکمه Header */
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 20px;
+
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+
+.nav-button:hover {
+    background: #35c8d0;
+    border-color: #35c8d0;
+    color: #101515;
+}
+
