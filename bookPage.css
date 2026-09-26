@@ -1,0 +1,862 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* 
+   حرکت نرم هنگام کلیک روی لینک‌های داخلی
+*/
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* 
+   ظاهر کلی body
+   پس‌زمینه سفید است همان چیزی که خواستی.
+*/
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #ffffff;
+    color: #15191a;
+    line-height: 1.6;
+}
+
+
+/* حذف underline لینک‌ها */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* جلوگیری از بیرون زدن تصاویر */
+
+img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* ============================================================
+   CONTAINER
+   حداکثر عرض محتوای سایت
+   ============================================================ */
+
+.container {
+    width: min(1180px, 90%);
+    margin: 0 auto;
+}
+
+
+/* فاصله عمودی بیشتر بخش‌ها */
+
+.section {
+    padding: 130px 0;
+}
+
+
+/* ============================================================
+   HEADER / NAVBAR
+   ============================================================ */
+
+.header {
+    position: sticky;
+    background: #071415;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 20;
+
+    /*
+       خط بسیار ظریف زیر Header
+       برای ایجاد همان Border محو که خواستی.
+    */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+
+.nav-wrapper {
+    height: 88px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* لوگو */
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #ffffff;
+}
+
+
+.logo span {
+    color: #35c8d0;
+}
+
+
+/* منوی اصلی */
+
+.navigation {
+    display: flex;
+    gap: 34px;
+}
+
+
+.navigation a {
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 12px;
+    font-weight: 500;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+
+.navigation a:hover,
+.navigation a.active {
+    color: #ffffff;
+}
+
+
+/* دکمه Header */
+
+.nav-button {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 12px 20px;
+
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+
+.nav-button:hover {
+    background: #35c8d0;
+    border-color: #35c8d0;
+    color: #101515;
+}
+
+
+/* hero-------------------------- */
+.hotel-hero {
+    min-height: 390px;
+    display: flex;
+    align-items: center;
+    padding: 70px 8%;
+    background:
+        linear-gradient(90deg, rgba(20, 27, 32, .88), rgba(20, 27, 32, .35)),
+        url("../images/b6aa159dae321b2261bb50f4ba342d1d.jpg") center/cover;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+}
+
+.small-title {
+    font-size: 11px;
+    letter-spacing: 2px;
+    font-weight: 700;
+    margin-bottom: 18px;
+    color: #13b7c7;
+}
+
+.hero-content h1 {
+    font-size: 64px;
+    line-height: 1.05;
+    margin-bottom: 20px;
+}
+
+.hero-content h1 span {
+    display: block;
+    font-family: "Playfair Display", serif;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.hero-text {
+    max-width: 500px;
+    line-height: 1.7;
+    color: #e0e2e3;
+}
+
+
+.hotel-search {
+    width: 84%;
+    margin: -35px auto 80px;
+    padding: 25px;
+    background: white;
+    display: flex;
+    align-items: end;
+    gap: 15px;
+    box-shadow: 0 12px 35px rgba(0,0,0,.10);
+    position: relative;
+}
+
+.search-item {
+    flex: 1;
+}
+
+.search-item label {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    color: #7a8389;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+}
+
+.search-item select,
+.search-item input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #dfe3e5;
+    padding: 0 12px;
+    background: white;
+    color: #28313a;
+}
+
+.hotel-search button {
+    height: 45px;
+    padding: 0 25px;
+    border: none;
+    background: #18202b;
+    color: white;
+   
+    cursor: pointer;
+}
+
+.hotel-search button:hover {
+    background: #8db9ba;
+    color: #18202b;
+}
+
+/* book--------------------------------------------------- */
+
+.search-tabs {
+    border: none;
+    padding: 20px 30px;
+    gap: 10px;
+    color: #071415;
+    font-size: 14px;
+    font-weight: 500;
+
+
+
+}
+
+.search-tabs a.active {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 6px;
+    color: #13b7c7;
+
+}
+
+.Cites-search {
+    margin-top: -60px;
+    padding: 0 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+
+.search-card {
+    max-width: 1270px;
+    margin: auto;
+    background: white;
+    margin-top: 20px;
+    border: 1px solid var(--border);
+
+
+    box-shadow:
+        0 20px 60px rgba(15, 23, 42, .12);
+
+    padding: 22px;
+    padding: 12px 20px;
+
+    color: #ffffff;
+
+    border: 1px solid rgba(255, 255, 255, 0.4);
+ font-size: 14px;
+
+    transition: 0.3s;
+}
+
+
+.search-fields {
+    display: grid;
+    grid-template-columns:
+        1.1fr 30px 1.1fr 1fr auto;
+
+    align-items: center;
+    gap: 12px;
+}
+
+.field {
+    min-height: 70px;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.field-label {
+    font-size: 14px;
+    color: #98a2b3;
+    margin-bottom: 4px;
+}
+
+.field strong {
+    font-size: 18px;
+}
+
+.field small {
+    color: #98a2b3;
+    font-size: 18px;
+    margin-top: 3px;
+}
+
+.swap {
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+
+
+    color: #fff;
+
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+.swap:hover {
+    color: #071415;
+    border: none;
+    background: #35c8d0;
+    transform: translateY(-2px);
+
+}
+
+
+
+.search-button {
+    height: 70px;
+    padding: 10px 25px;
+
+    border: none;
+    border-radius: 2px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    transform: translateY(-2px);
+    background: #13b7c7;
+}
+
+
+
+/* =========================
+   TOURS PACKAGES
+========================= */
+
+.tours-section {
+    padding: 100px 8%;
+    background-color: #ffffff;
+}
+
+
+/* Header */
+
+.tours-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 80px;
+    margin-bottom: 65px;
+}
+
+.section-title {
+    width: 50%;
+}
+
+.field {
+    min-height: 70px;
+    padding: 12px 16px;
+    border: 1px solid #e2e8f0;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-item {
+    flex: 1;
+}
+
+.search-item select,
+.search-item input {
+    width: 100%;
+    height: 45px;
+    border: 1px solid #dfe3e5;
+    padding: 0 12px;
+    background: white;
+    color: #28313a;
+    box-sizing: border-box;
+}
+
+.search-item select {
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+}
+
+a{
+    color: #071415;
+    gap: 40px;
+    font-size: 14px;
+    text-decoration: none;
+    padding: 10px;
+
+}
+.search-button {
+    height: 45px;
+    padding: 0 25px;
+    border: none;
+    border-radius: 2px;
+    background: black;
+    color: white;
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    transform: translateY(-2px);
+    background: #13b7c7;
+}
+/* boo-------------------------- */
+.small-line {
+    display: block;
+    width: 28px;
+    height: 2px;
+    background-color: #21c4d3;
+    margin-bottom: 18px;
+}
+
+.section-title h2 {
+    margin: 0;
+    color: #102132;
+    font-size: 52px;
+    line-height: 1.05;
+    font-weight: 600;
+    letter-spacing: -2px;
+}
+
+.section-title h2 em {
+    font-family: Georgia, serif;
+    font-weight: 400;
+}
+
+
+.tours-intro {
+    width: 38%;
+    padding-bottom: 5px;
+}
+
+.tours-intro p {
+    color: #687582;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.view-all {
+    color: #18b9c9;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* Cards */
+
+.tour-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.tour-card {
+    border: 1px solid #e4e8ea;
+    background: #fff;
+    transition: transform 0.3s ease;
+}
+
+.tour-card:hover {
+    transform: translateY(-6px);
+}
+
+
+/* Image */
+
+.tour-image {
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tour-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.tour-card:hover .tour-image img {
+    transform: scale(1.05);
+}
+
+
+.tour-category {
+    position: absolute;
+    left: 20px;
+    bottom: 18px;
+
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.tour-category::before {
+    content: "";
+    display: inline-block;
+    width: 22px;
+    height: 2px;
+    background-color: #22c4d3;
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+
+/* Content */
+
+.tour-content {
+    padding: 28px 25px 24px;
+}
+
+.tour-content h3 {
+    color: #102132;
+    font-size: 26px;
+    margin: 0 0 5px;
+    font-weight: 600;
+}
+
+.tour-location {
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 18px;
+    color: #344553;
+    margin: 0 0 18px;
+}
+
+.tour-description {
+    color: #71808c;
+    font-size: 14px;
+    line-height: 1.7;
+    min-height: 72px;
+    margin-bottom: 25px;
+}
+
+
+/* Bottom */
+
+.tour-bottom {
+    border-top: 1px solid #e7ebed;
+    padding-top: 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tour-bottom div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.tour-bottom span {
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #53616d;
+}
+
+.tour-bottom strong {
+    font-size: 16px;
+    color: #102132;
+}
+
+.tour-bottom a {
+    color: #13b7c7;
+    text-decoration: none;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    .tours-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+    }
+
+    .section-title,
+    .tours-intro {
+        width: 100%;
+    }
+
+    .tour-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .tour-image {
+        height: 320px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .tours-section {
+        padding: 70px 6%;
+    }
+
+    .section-title h2 {
+        font-size: 40px;
+    }
+
+    .tour-image {
+        height: 250px;
+    }
+
+    .tour-content h3 {
+        font-size: 23px;
+    }
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+    background: #0b1415;
+
+    color: white;
+
+    padding: 90px 0 30px;
+}
+
+
+.footer-top {
+    display: grid;
+
+    grid-template-columns: 1.5fr repeat(4, 1fr);
+
+    gap: 50px;
+}
+
+
+/* لوگوی Footer */
+
+.footer-logo {
+    display: inline-block;
+
+    margin-bottom: 20px;
+}
+
+
+.footer-brand p {
+    max-width: 270px;
+
+    color: rgba(255, 255, 255, 0.55);
+
+    font-size: 12px;
+}
+
+
+/* شبکه‌های اجتماعی */
+
+.socials {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 25px;
+}
+
+
+.socials a {
+    width: 34px;
+    height: 34px;
+
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 9px;
+
+    color: rgba(255, 255, 255, 0.65);
+
+    transition: 0.3s;
+}
+
+
+.socials a:hover {
+    background: #35c8d0;
+
+    color: #071415;
+
+    border-color: #35c8d0;
+}
+
+
+/* ستون‌های Footer */
+
+.footer-column {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 12px;
+}
+
+
+.footer-column h4 {
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+
+    text-transform: uppercase;
+}
+
+
+.footer-column a {
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 11px;
+
+    transition: 0.3s;
+}
+
+
+.footer-column a:hover {
+    color: #42d0d7;
+
+    padding-left: 4px;
+}
+
+
+.footer-column p {
+    color: rgba(255, 255, 255, 0.5);
+
+    font-size: 11px;
+}
+
+
+/* خط Footer */
+
+.footer-line {
+    height: 1px;
+
+    background: rgba(255, 255, 255, 0.1);
+
+    margin: 70px 0 25px;
+}
+
+
+/* قسمت پایینی */
+
+.footer-bottom {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+.footer-bottom p {
+    color: rgba(255, 255, 255, 0.35);
+
+    font-size: 10px;
+}
+
+
+.footer-bottom div {
+    display: flex;
+
+    gap: 25px;
+}
+
+
+.footer-bottom a {
+    color: rgba(255, 255, 255, 0.4);
+
+    font-size: 10px;
+}
